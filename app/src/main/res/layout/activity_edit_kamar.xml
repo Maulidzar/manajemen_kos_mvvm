@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNamaKamar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kamar"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nomor Kamar">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNomorKamar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/cb_terisi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terisi" />
+
+        <CheckBox
+            android:id="@+id/cb_bayar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sudah Bayar"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btn_tanggal_bayar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilih tanggal awal huni"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+                android:id="@+id/tv_tanggal_bayar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tanggal belum dipilih"
+            android:layout_marginTop="4dp"
+            android:textStyle="italic" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Penghuni"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNamaPenghuni"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapSentences"
+                android:gravity="top|start"
+                android:layout_marginTop="10dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="NIK Penghuni"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNikPenghuni"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_marginTop="10dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alamat Asal Penghuni"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAlamatAsal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapSentences"
+                android:gravity="top|start"
+                android:layout_marginTop="10dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kebutuhan Maintenance"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMaintenance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapSentences"
+                android:gravity="top|start"
+                android:layout_marginTop="10dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            android:layout_marginTop="24dp" />
+    </LinearLayout>
+
+</ScrollView>

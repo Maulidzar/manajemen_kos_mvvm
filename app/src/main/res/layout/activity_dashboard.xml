@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/white"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvDashboardTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Manajemen Kos"
+            android:textColor="#212121"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_tambah_kamar"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="#4CAF50"
+            android:padding="8dp"
+            android:text="Tambah Kamar"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/btn_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@drawable/icon_settings" />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:queryHint="Cari Kamar"
+                android:iconifiedByDefault="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter:"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:textSize="16sp"
+                />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/filterChipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipNotOccupied"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kosong"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipOccupiedNotPaid"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Belum Bayar"/>
+
+            </com.google.android.material.chip.ChipGroup>
+            
+            <CheckBox
+                android:id="@+id/cb_maintenance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Butuh Maintenance"
+                android:layout_marginLeft="4dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_kamar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_empty_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tidak menemukan kamar."
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

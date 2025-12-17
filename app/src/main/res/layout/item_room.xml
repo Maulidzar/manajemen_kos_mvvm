@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <!-- Room Info -->
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNamaKamar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Kamar 1"
+                android:textColor="#212121"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStatusTerisi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Status: Available"
+                android:textColor="#4CAF50"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvStatusBayar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Payment: N/A"
+                android:textColor="#757575"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvTanggalBayar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Last Payment: N/A"
+                android:textColor="#757575"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvNamaPenghuni"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Penghuni: "
+                android:textColor="#757575"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvNikPenghuni"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NIK Penghuni: "
+                android:textColor="#757575"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvAlamatAsal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat Asal: "
+                android:textColor="#757575"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvMaintenance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maintenance: "
+                android:textColor="#757575"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp">
+
+            <Button
+                android:id="@+id/btnEditKamar"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="#F44336"
+                android:padding="8dp"
+                android:text="Edit"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnHapusKamar"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:background="#F44336"
+                android:padding="8dp"
+                android:text="Delete"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView> 
